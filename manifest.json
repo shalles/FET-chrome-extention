@@ -1,0 +1,53 @@
+{
+    "name": "platform_head",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "模拟各平台header",
+    "icons": {
+        "16": "src/img/icon16.png",
+        "48": "src/img/icon48.png",
+        "128": "src/img/icon128.png"
+    },
+    // "default_locale": "en",
+    "browser_action": {
+        "default_icon": "src/img/icon48.png", // optional 
+        "default_popup": "popup.html", // optional 
+        "default_title": "simulate platform header" // optional; shown in tooltip 
+    },
+    "permissions": [
+        "*://*/*"
+        // "http://*/*",
+        // "https://*/*",
+        // "tabs",
+        // "management",
+        // "cookies",
+        // "notifications",
+        // "contextMenus",
+        // "history",
+        // "storage",
+        // "proxy",
+        // "webRequest",
+        // "webRequestBlocking"
+    ],
+    // "options_page": "options.html",
+    "content_scripts": [{
+        "matches": [
+            "*://*/*"
+        ],
+        "js": [
+            "src/js/content.js"
+        ],
+        "css": [
+            "src/css/content.css"
+        ],
+        "run_at": "document_end"
+    }],
+    "background": {
+        // "page": "background.html",
+        "persistent": true,
+        "scripts": [
+            "src/js/background.js"
+        ]
+    }
+    // "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+}

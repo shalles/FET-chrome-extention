@@ -1,0 +1,58 @@
+html.extention-simulate{
+    position: relative;
+}
+.extention-simulate-head{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 48px;
+    width: 100%;
+    background-color: #373b3e;
+    line-height: 48px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    z-index: 99999;
+}
+
+.extention-simulate-head::before,
+.extention-simulate-head::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+.extention-simulate-head::before {
+    left: 20px;
+    width: 12px;
+    height: 12px;
+    border: solid #fff 0;
+    border-width: 2px 0 0 2px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.extention-simulate-head::after {
+    right: 20px;
+    width: 4px;
+    height: 24px;
+    background-size: 4px 8px;
+    background-image: linear-gradient(transparent 50%, #fff 50%, #fff);
+}
+
+.extention-simulate-head.qq{
+    background-color: #11b5f2;
+}
+
+.extention-simulate-head.app{
+    height: 44px;
+    line-height: 44px;
+    background-color: #fafafa;
+    color: #616161;
+}
+.extention-simulate-head.app::before{
+    border-color: #616161;
+}
+.extention-simulate-head.app::after{
+    background-image: linear-gradient(transparent 50%, #616161 50%, #616161);
+}

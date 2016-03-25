@@ -1,0 +1,19 @@
+html,body,ul,li{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    padding: 8px 6px;
+    user-select: none;
+}
+
+li:hover{
+    cursor: pointer;
+    background-color: #efefef;
+}
+
+ul li{
+    width: 60px;
+    text-align: center;
+}
