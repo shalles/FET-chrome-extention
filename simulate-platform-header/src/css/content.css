@@ -38,6 +38,7 @@ html.extention-simulate{
     height: 24px;
     background-size: 4px 8px;
     background-image: linear-gradient(transparent 50%, #fff 50%, #fff);
+    background-position: center top;
 }
 
 .extention-simulate-head.qq{

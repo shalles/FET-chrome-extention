@@ -4,19 +4,21 @@
 
 // console.log('content chrome', chrome);
 ;(function(){
+
 var headHeightMap = {
     app: 44
 };
 
 var port = chrome.runtime.connect({name: 'content'});
 port.onMessage.addListener(function(response) {
-    if(response === 'reset'){
+    var platform = response.platform;
+
+    if(platform === 'reset'){
         location.reload();
         return;
     }
-
+    // console.log(chrome.extension.getViews( { "type" : "tab" } ));
     if(/Mobile/.test(navigator.userAgent)){
-        var platform = response;
         var head, body = document.body;
         var html = document.documentElement;
         var title = document.title;
@@ -28,7 +30,6 @@ port.onMessage.addListener(function(response) {
             body.insertBefore(head, body.firstElementChild);
         }
 
-
         if(platform === 'full'){
             html.classList.remove('extention-simulate');
             body.removeChild(head);
@@ -37,13 +38,14 @@ port.onMessage.addListener(function(response) {
             return;
         }
 
-        head.innerHTML = (title.length > 10 ? title.slice(0,10) + '...' : title) || '微信head模拟';
+        head.innerHTML = (title.length > 14 ? title.slice(0,12) + '...' : title) || '微信head模拟';
         head.classList.remove('weixin', 'qq', 'app', 'alipay');
-        head.classList.add(response);
+        head.classList.add(platform);
 
         var headHeight = headHeightMap[platform] || 48;
         html.style.marginTop = headHeight + 'px';
         html.style.height = body.style.height = innerHeight - headHeight + 'px';
     }
 });
+
 })();
