@@ -1,8 +1,8 @@
 {
-    "name": "platform header",
+    "name": "simulate platform header",
     "version": "1.0.0",
     "manifest_version": 2,
-    "description": "模拟各平台header",
+    "description": "移动调试模式下模拟各平台header, 微信、支付宝、QQ、客户端等",
     // "default_locale": "en",
     "icons": {
         "16": "src/img/icon.png",

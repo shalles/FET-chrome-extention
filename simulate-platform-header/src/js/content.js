@@ -5,6 +5,7 @@
 // console.log('content chrome', chrome);
 ;(function(){
 
+// TODO: option操作动态增删改查header
 var headHeightMap = {
     app: 44
 };
@@ -28,6 +29,13 @@ port.onMessage.addListener(function(response) {
             head.className = 'extention-simulate-head';
             html.classList.add('extention-simulate');
             body.insertBefore(head, body.firstElementChild);
+            head.addEventListener('click', function(e){
+                if (e.x < 44){
+                    history.back();
+                } else if (e.x > (innerWidth - 48)){
+                    location.reload();
+                }
+            })
         }
 
         if(platform === 'full'){
