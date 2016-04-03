@@ -5,25 +5,93 @@ html.extention-simulate{
     position: fixed;
     top: 0;
     left: 0;
-    height: 48px;
     width: 100%;
-    background-color: #373b3e;
-    line-height: 48px;
     font-size: 16px;
-    color: #fff;
     text-align: center;
+    color: #fff;
     z-index: 99999;
+    background-color: #373b3e;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    user-select: none;
+}
+/*.extention-simulate-head .status-bar{
+    position: relative;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    overflow: hidden;
+    text-align: center;
 }
 
-.extention-simulate-head::before,
-.extention-simulate-head::after {
+.extention-simulate-head .status-bar .back{
+    float: left;
+    width: 110px;
+    margin-left: 6px;
+    text-align: left;
+}
+.extention-simulate-head .status-bar .battery{
+    float: right;
+    width: 110px;
+    text-align: right;
+    margin-right: 8px;
+}
+
+.extention-simulate-head .status-bar .back i {
+    display: inline-block;
+    margin: 0;
+    width: 0;
+    height: 0;
+    margin-bottom: -1px;
+    border: solid #fff 6px;
+    border-left: 0;
+    border-color: transparent #fff transparent transparent;
+}
+
+.extention-simulate-head .status-bar .battery i {
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    width: 22px;
+    height: 6px;
+    margin: 0;
+    background-color: #fff;
+}
+*/
+/*.extention-simulate-head .status-bar .battery i::before{
+    left: -2px;
+    width: 24px;
+    height: 8px;
+    border: solid 1px #fff;
+}
+
+.extention-simulate-head .status-bar .battery i::after{
+    right: -4px;
+    width: 2px;
+    height: 4px;
+    background-color: #fff;
+}*/
+
+
+/*.extention-simulate-head .header{
+    position: relative;
+    bottom: 0;
+    height: 48px;
+    line-height: 48px;
+}*/
+
+/*.extention-simulate-head .status-bar .battery i::before,
+.extention-simulate-head .status-bar .battery i::after,
+.extention-simulate-head .header::before,
+.extention-simulate-head .header::after {
     content: '';
     position: absolute;
     top: 0;
     bottom: 0;
     margin: auto 0;
-}
-.extention-simulate-head::before {
+}*/
+/*.extention-simulate-head .header::before {
     left: 20px;
     width: 12px;
     height: 12px;
@@ -32,7 +100,7 @@ html.extention-simulate{
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
-.extention-simulate-head::after {
+.extention-simulate-head .header::after {
     right: 20px;
     width: 4px;
     height: 24px;
@@ -41,19 +109,47 @@ html.extention-simulate{
     background-position: center -1px;
 }
 
-.extention-simulate-head.qq{
+.extention-simulate-head .header.qq{
     background-color: #11b5f2;
 }
 
-.extention-simulate-head.app{
+.extention-simulate-head .header.app{
     height: 44px;
     line-height: 44px;
     background-color: #fafafa;
     color: #616161;
 }
-.extention-simulate-head.app::before{
+.extention-simulate-head .header.app::before{
     border-color: #616161;
 }
-.extention-simulate-head.app::after{
+.extention-simulate-head .header.app::after{
     background-image: linear-gradient(transparent 50%, #616161 50%, #616161);
 }
+
+.extention-simulate-head .status-bar{
+    height: 24px;
+}
+
+.extend-simulate-head.adr .status-bar{
+    height: 25px;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
