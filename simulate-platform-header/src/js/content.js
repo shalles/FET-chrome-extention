@@ -80,13 +80,15 @@ port.onMessage.addListener(function(response) {
 
     var platform = response.platform;
 
+    if(!platform) return;
+
     if(platform === 'reset'){
         location.reload();
         return;
     }
 
     var ua = navigator.userAgent;
-    var os = /(android)/i.test(ua) && 'adr' || /(iphone|ipod|ios|ipad)/i.test(ua) && 'ios' || /(windows phone)/i.test(ua).test(ua) && 'wp' || 'adr'
+    var os = /(android)/i.test(ua) && 'adr' || /(iphone|ipod|ios|ipad)/i.test(ua) && 'ios' || /(windows phone)/i.test(ua) && 'wp' || 'adr'
 
     // console.log(chrome.extension.getViews( { "type" : "tab" } ));
     if(/Mobile/.test(ua)){
